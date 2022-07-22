@@ -2,10 +2,7 @@ package se.warting.signatureview.views
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.Color
-import android.graphics.Paint
+import android.graphics.*
 import android.os.Bundle
 import android.os.Parcelable
 import android.util.AttributeSet
@@ -13,23 +10,25 @@ import android.view.GestureDetector
 import android.view.GestureDetector.SimpleOnGestureListener
 import android.view.MotionEvent
 import android.view.View
+import android.view.ViewTreeObserver
 import androidx.annotation.ColorInt
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
-import java.util.ArrayList
-import kotlin.math.ceil
-import kotlin.math.max
-import kotlin.math.roundToInt
-import kotlin.math.sqrt
-import se.warting.signatureview.BuildConfig
+import se.warting.signatureview.view.ViewCompat
+import se.warting.signatureview.view.ViewTreeObserverCompat
 import se.warting.signaturecore.Event
 import se.warting.signaturecore.ExperimentalSignatureApi
-import se.warting.signatureview.R
 import se.warting.signaturecore.Signature
+import se.warting.signatureview.BuildConfig
+import se.warting.signatureview.R
 import se.warting.signatureview.utils.Bezier
 import se.warting.signatureview.utils.ControlTimedPoints
 import se.warting.signatureview.utils.SvgBuilder
 import se.warting.signatureview.utils.TimedPoint
+import kotlin.math.ceil
+import kotlin.math.max
+import kotlin.math.roundToInt
+import kotlin.math.sqrt
 
 @SuppressWarnings("TooManyFunctions")
 class SignaturePad(context: Context, attrs: AttributeSet?) : View(context, attrs) {
@@ -301,6 +300,43 @@ class SignaturePad(context: Context, attrs: AttributeSet?) : View(context, attrs
         clear()
         originalEvents.addAll(signature.events)
         iter = originalEvents.iterator()
+    }
+
+    fun setSignatureBitmap(signature: Bitmap) {
+        if (ViewCompat.isLaidOut(this)) {
+            clear()
+            ensureSignatureBitmapInOnDraw()
+
+            val tempSrc = RectF()
+            val tempDst = RectF()
+
+            val dWidth: Int = signature.width
+            val dHeight: Int = signature.height
+            val vWidth = width
+            val vHeight = height
+
+            // Generate the required transform.
+            tempSrc[0f, 0f, dWidth.toFloat()] = dHeight.toFloat()
+            tempDst[0f, 0f, vWidth.toFloat()] = vHeight.toFloat()
+
+            val drawMatrix = Matrix()
+            drawMatrix.setRectToRect(tempSrc, tempDst, Matrix.ScaleToFit.CENTER)
+
+            val canvas = Canvas(mSignatureTransparentBitmap!!)
+            canvas.drawBitmap(signature, drawMatrix, null)
+            makeEmpty(false)
+            invalidate()
+        } else {
+            viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
+                override fun onGlobalLayout() {
+                    // Remove layout listener...
+                    ViewTreeObserverCompat.removeOnGlobalLayoutListener(viewTreeObserver, this)
+
+                    // Signature bitmap...
+                    setSignatureBitmap(signature)
+                }
+            })
+        }
     }
 
     fun getSignatureBitmap(): Bitmap {

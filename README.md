@@ -58,11 +58,13 @@ Then, include the library as dependency:
 
 2. Configure attributes.
 
-* `penMinWidth` - The minimum width of the stroke (default: 3dp).
-* `penMaxWidth` - The maximum width of the stroke (default: 5dp).
-* `penColor` - The color of the stroke (default: R.color.pen_color_primary [#012371]).
-* `velocityFilterWeight` - Weight used to modify new velocity based on the previous velocity (default: 1.2).
-* `clearOnDoubleClick` - Double click to clear pad (default: false)
+* `penMinWidth` - The minimum width of the stroke (default: 3dp [R.dimen.pen_min_width]).
+* `penMaxWidth` - The maximum width of the stroke (default: 6dp [R.dimen.pen_max_width]).
+* `penColor` - The color of the stroke (default: #012371 [R.color.pen_color_primary]).
+* `velocityFilterWeight` - Weight used to modify new velocity based on the previous velocity (default: 0.9 [R.dimen.pen_velocity]).
+* `clearOnDoubleClick` - Double click to clear pad (default: false [R.bool.signature_pad_clear_on_double_click])
+
+All default values can be overwritten by XML (colors.xml, values.xml, dimens.xml).
 
 3. Get signature data
 

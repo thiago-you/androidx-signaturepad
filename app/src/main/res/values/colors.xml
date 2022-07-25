@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="pen_color">#273c75</color>
-    <color name="pen_color_dark">#012371</color>
-    <color name="pen_color_neon">#1f51ff</color>
-
+    <color name="pen_color">#012371</color>
     <color name="pad_background">#ffffff</color>
-    <color name="pad_background_soft">#fafafa</color>
 
 </resources>

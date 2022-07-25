@@ -1,8 +1,9 @@
 <resources>
 
-    <dimen name="default_pad_height">200dp</dimen>
+    <dimen name="signature_pad_height">200dp</dimen>
 
-    <dimen name="default_pen_velocity">1.2</dimen>
-    <dimen name="default_pen_max_width">3dp</dimen>
+    <dimen name="pen_velocity">0.9</dimen>
+    <dimen name="pen_min_width">3dp</dimen>
+    <dimen name="pen_max_width">6dp</dimen>
 
 </resources>

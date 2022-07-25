@@ -74,12 +74,6 @@ class SignaturePad(context: Context, attrs: AttributeSet?) : View(context, attrs
             }
         })
 
-    // Default attribute values
-    companion object {
-        private const val DEFAULT_ATTR_PEN_MIN_WIDTH_PX = 3
-        private const val DEFAULT_ATTR_CLEAR_ON_DOUBLE_CLICK = false
-    }
-
     private val mPaint = Paint()
 
     private var mSignatureTransparentBitmap: Bitmap? = null
@@ -584,12 +578,12 @@ class SignaturePad(context: Context, attrs: AttributeSet?) : View(context, attrs
         try {
             mMinWidth = a.getDimensionPixelSize(
                 R.styleable.SignaturePad_penMinWidth,
-                convertDpToPx(DEFAULT_ATTR_PEN_MIN_WIDTH_PX.toFloat())
+                convertDpToPx(resources.getDimensionInDp(R.dimen.pen_min_width).toFloat())
             )
 
             mMaxWidth = a.getDimensionPixelSize(
                 R.styleable.SignaturePad_penMaxWidth,
-                convertDpToPx(resources.getDimensionInDp(R.dimen.default_pen_max_width).toFloat())
+                convertDpToPx(resources.getDimensionInDp(R.dimen.pen_max_width).toFloat())
             )
 
             mPaint.color = a.getColor(
@@ -599,12 +593,12 @@ class SignaturePad(context: Context, attrs: AttributeSet?) : View(context, attrs
 
             mVelocityFilterWeight = a.getFloat(
                 R.styleable.SignaturePad_velocityFilterWeight,
-                resources.getFloatDimension(R.dimen.default_pen_velocity)
+                resources.getFloatDimension(R.dimen.pen_velocity)
             )
 
             mClearOnDoubleClick = a.getBoolean(
                 R.styleable.SignaturePad_clearOnDoubleClick,
-                DEFAULT_ATTR_CLEAR_ON_DOUBLE_CLICK
+                resources.getBoolean(R.bool.signature_pad_clear_on_double_click)
             )
         } finally {
             a.recycle()

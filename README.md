@@ -26,21 +26,21 @@ Latest version of the library can be found on Jitpack.io.
 Open your `build.gradle` and make sure that Maven repository is declared into `repositories` section with `Jitpack.io` source:
 
 ```gradle
-   allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
-	}
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
 ```
 
 Then, include the library as dependency:
 
 ```gradle
-	dependencies {
-	    ...
-        implementation 'com.github.thiago-you:androidx-signaturepad:Tag'
-    }
+dependencies {
+    ...
+    implementation 'com.github.thiago-you:androidx-signaturepad:Tag'
+}
 ```
 
 ## Usage

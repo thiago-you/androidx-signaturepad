@@ -1,23 +1,23 @@
-public final class se/warting/signaturepad/BuildConfig {
+public final class seyouhiago/signaturepad/BuildConfig {
 	public static final field BUILD_TYPE Ljava/lang/String;
 	public static final field DEBUG Z
 	public static final field LIBRARY_PACKAGE_NAME Ljava/lang/String;
 	public fun <init> ()V
 }
 
-public final class se/warting/signaturepad/SignaturePadAdapter {
+public final class seyouhiago/signaturepad/SignaturePadAdapter {
 	public static final field $stable I
-	public fun <init> (Lse/warting/signatureview/views/SignaturePad;)V
+	public fun <init> (Lseyouhiago/signatureview/views/SignaturePad;)V
 	public final fun clear ()V
-	public final fun getSignature ()Lse/warting/signaturecore/Signature;
+	public final fun getSignature ()Lseyouhiago/signaturecore/Signature;
 	public final fun getSignatureBitmap ()Landroid/graphics/Bitmap;
 	public final fun getSignatureSvg ()Ljava/lang/String;
 	public final fun getTransparentSignatureBitmap ()Landroid/graphics/Bitmap;
 	public final fun isEmpty ()Z
-	public final fun setSignature (Lse/warting/signaturecore/Signature;)V
+	public final fun setSignature (Lseyouhiago/signaturecore/Signature;)V
 }
 
-public final class se/warting/signaturepad/SignaturePadViewKt {
+public final class seyouhiago/signaturepad/SignaturePadViewKt {
 	public static final fun SignaturePadView-s1NOShc (FFJFZLkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;Landroidx/compose/runtime/Composer;II)V
 }
 

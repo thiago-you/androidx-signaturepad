@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="se.warting.signaturepad">
+    package="you.thiago.signaturepad">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true">
         <activity
-            android:name=".MainActivity"
+            android:name="you.thiago.signaturepad.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,10 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ComposeActivity" />
-        <activity android:name=".ViewActivity" />
-        <activity android:name=".DataBindingActivity" />
-        <activity android:name=".SaveRestoreActivity" />
+        <activity android:name="you.thiago.signaturepad.ComposeActivity" />
+        <activity android:name="you.thiago.signaturepad.ViewActivity" />
+        <activity android:name="you.thiago.signaturepad.DataBindingActivity" />
+        <activity android:name="you.thiago.signaturepad.SaveRestoreActivity" />
     </application>
 
 </manifest>

@@ -11,7 +11,7 @@ androidGitVersion {
     tagPattern = "^v[0-9]+.*"
 }
 
-val PUBLISH_GROUP_ID: String by extra("se.warting.signature")
+val PUBLISH_GROUP_ID: String by extra("you.thiago.signature")
 val PUBLISH_VERSION: String by extra(androidGitVersion.name().replace("v", ""))
 val PUBLISH_ARTIFACT_ID by extra("signature-pad")
 

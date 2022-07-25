@@ -54,7 +54,7 @@ afterEvaluate {
                 pom {
                     name = PUBLISH_ARTIFACT_ID
                     description = 'Android Signature Pad is an Android library for drawing smooth signatures'
-                    url = 'https://github.com/warting/android-signaturepad'
+                    url = 'https://github.com/thiago-you/androidx-signaturepad'
                     licenses {
                         license {
                             name = 'MIT License'
@@ -63,16 +63,16 @@ afterEvaluate {
                     }
                     developers {
                         developer {
-                            id = 'warting'
-                            name = 'Stefan Wärting'
-                            email = 'stefan@warting.se'
+                            id = 'thiago-you'
+                            name = 'Thiago You'
+                            email = 'thiago.youx@gmail.com'
                         }
                     }
 
                     scm {
-                        connection = 'scm:git@github.com:warting/android-signaturepad.git'
-                        developerConnection = 'scm:git:ssh://github.com/warting/android-signaturepad.git'
-                        url = 'https://github.com/warting/android-signaturepad/tree/main'
+                        connection = 'scm:git@github.com:thiago-you/androidx-signaturepad.git'
+                        developerConnection = 'scm:git:ssh://github.com/thiago-you/androidx-signaturepad.git'
+                        url = 'https://github.com/thiago-you/androidx-signaturepad/tree/main'
                     }
                 }
             }

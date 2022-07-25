@@ -1,11 +1,11 @@
-public final class se/warting/signaturecore/BuildConfig {
+public final class you/thiago/signaturecore/BuildConfig {
 	public static final field BUILD_TYPE Ljava/lang/String;
 	public static final field DEBUG Z
 	public static final field LIBRARY_PACKAGE_NAME Ljava/lang/String;
 	public fun <init> ()V
 }
 
-public final class se/warting/signaturecore/Event : android/os/Parcelable {
+public final class you/thiago/signaturecore/Event : android/os/Parcelable {
 	public static final field $stable I
 	public static final field CREATOR Landroid/os/Parcelable$Creator;
 	public fun <init> (JIFF)V
@@ -13,8 +13,8 @@ public final class se/warting/signaturecore/Event : android/os/Parcelable {
 	public final fun component2 ()I
 	public final fun component3 ()F
 	public final fun component4 ()F
-	public final fun copy (JIFF)Lse/warting/signaturecore/Event;
-	public static synthetic fun copy$default (Lse/warting/signaturecore/Event;JIFFILjava/lang/Object;)Lse/warting/signaturecore/Event;
+	public final fun copy (JIFF)Lyou/thiago/signaturecore/Event;
+	public static synthetic fun copy$default (Lyou/thiago/signaturecore/Event;JIFFILjava/lang/Object;)Lyou/thiago/signaturecore/Event;
 	public fun describeContents ()I
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getAction ()I
@@ -26,25 +26,25 @@ public final class se/warting/signaturecore/Event : android/os/Parcelable {
 	public fun writeToParcel (Landroid/os/Parcel;I)V
 }
 
-public final class se/warting/signaturecore/Event$Creator : android/os/Parcelable$Creator {
+public final class you/thiago/signaturecore/Event$Creator : android/os/Parcelable$Creator {
 	public fun <init> ()V
 	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
-	public final fun createFromParcel (Landroid/os/Parcel;)Lse/warting/signaturecore/Event;
+	public final fun createFromParcel (Landroid/os/Parcel;)Lyou/thiago/signaturecore/Event;
 	public synthetic fun newArray (I)[Ljava/lang/Object;
-	public final fun newArray (I)[Lse/warting/signaturecore/Event;
+	public final fun newArray (I)[Lyou/thiago/signaturecore/Event;
 }
 
-public abstract interface annotation class se/warting/signaturecore/ExperimentalSignatureApi : java/lang/annotation/Annotation {
+public abstract interface annotation class you/thiago/signaturecore/ExperimentalSignatureApi : java/lang/annotation/Annotation {
 }
 
-public final class se/warting/signaturecore/Signature : android/os/Parcelable {
+public final class you/thiago/signaturecore/Signature : android/os/Parcelable {
 	public static final field $stable I
 	public static final field CREATOR Landroid/os/Parcelable$Creator;
 	public fun <init> (ILjava/util/List;)V
 	public final fun component1 ()I
 	public final fun component2 ()Ljava/util/List;
-	public final fun copy (ILjava/util/List;)Lse/warting/signaturecore/Signature;
-	public static synthetic fun copy$default (Lse/warting/signaturecore/Signature;ILjava/util/List;ILjava/lang/Object;)Lse/warting/signaturecore/Signature;
+	public final fun copy (ILjava/util/List;)Lyou/thiago/signaturecore/Signature;
+	public static synthetic fun copy$default (Lyou/thiago/signaturecore/Signature;ILjava/util/List;ILjava/lang/Object;)Lyou/thiago/signaturecore/Signature;
 	public fun describeContents ()I
 	public fun equals (Ljava/lang/Object;)Z
 	public final fun getEvents ()Ljava/util/List;
@@ -54,11 +54,11 @@ public final class se/warting/signaturecore/Signature : android/os/Parcelable {
 	public fun writeToParcel (Landroid/os/Parcel;I)V
 }
 
-public final class se/warting/signaturecore/Signature$Creator : android/os/Parcelable$Creator {
+public final class you/thiago/signaturecore/Signature$Creator : android/os/Parcelable$Creator {
 	public fun <init> ()V
 	public synthetic fun createFromParcel (Landroid/os/Parcel;)Ljava/lang/Object;
-	public final fun createFromParcel (Landroid/os/Parcel;)Lse/warting/signaturecore/Signature;
+	public final fun createFromParcel (Landroid/os/Parcel;)Lyou/thiago/signaturecore/Signature;
 	public synthetic fun newArray (I)[Ljava/lang/Object;
-	public final fun newArray (I)[Lse/warting/signaturecore/Signature;
+	public final fun newArray (I)[Lyou/thiago/signaturecore/Signature;
 }
 

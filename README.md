@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.warting.signature/signature-pad/badge.png)](https://maven-badges.herokuapp.com/maven-central/se.warting.signature/signature-pad)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/you.thiago.signature/signature-pad/badge.png)](https://maven-badges.herokuapp.com/maven-central/you.thiago.signature/signature-pad)
 
 Android Signature Pad
 ====================
@@ -35,11 +35,11 @@ section:
 Then, include the library as dependency:
 
 ```gradle
-compile 'se.warting.signature:signature-pad:<latest_version>' // jetpack Compose views
+compile 'you.thiago.signature:signature-pad:<latest_version>' // jetpack Compose views
 ```
 or
 ```gradle
-compile 'se.warting.signature:signature-view:<latest_version>' // legacy android views
+compile 'you.thiago.signature:signature-view:<latest_version>' // legacy android views
 ```
 
 ## Usage
